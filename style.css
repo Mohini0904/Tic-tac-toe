@@ -1,0 +1,77 @@
+body {
+  display: flex;
+  justify-content: center;  /* horizontally center */
+  align-items: center;      /* vertically center */
+  height: 100vh;            /* full screen height */
+  margin: 0;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #444;          /* darker gray */
+  border: 2px solid #222;
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  color: white;              /* text visible */
+}
+
+.cell:hover {
+  background: #666;          /* lighter on hover */
+}
+
+.cell.taken {
+  background: #333;
+  cursor: not-allowed;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+#reset {
+  background: #3c80e7;
+  color: white;
+}
+
+#micBtn.inactive {
+  background: #888;
+  color: white;
+}
+
+#micBtn.active {
+  background: #2eb7cc;
+  color: white;
+}
